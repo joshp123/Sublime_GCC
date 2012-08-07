@@ -10,7 +10,7 @@ If there are errors compiling, these will show in the Sublime console window. If
 
 When your compiled file is run, this runs in a separate cmd.exe window to show output. [More details below under alternate options]
 
-Installation Instruactions
+Installation Instructions
 --------------------------
 
 **Download all the files in the repository first using git clone / or the download as a .zip option. Don't try and copy the text across!**
@@ -45,7 +45,7 @@ This should be all done - close down all Sublime Text windows and all command pr
 
 If it doesn't work, restart your computer or something.
 
-Don't like having console windows everywhere?
+Alternate option: (Don't like having console windows everywhere?)
 ---------------------------------------------
 
 Use C_alternate.sublime-build. Rename it to C.sublime-build when you copy it over to your %appdata%\Sublime Text 2\Packages\User directory.
