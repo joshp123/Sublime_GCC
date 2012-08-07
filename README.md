@@ -1,6 +1,20 @@
 How to get Sublime Text 2 working with GCC
 ==========================================
 
+Usage:
+------
+
+It's very simple: use **Control + b** when in Sublime Text 2 to compile and run your C file.
+
+If there are errors compiling, these will show in the Sublime console window. If there are errors compiling, the file that is run may either not exist or be out of date (the .exe is not updated when there is compiler errors), so always check the console!
+
+When your compiled file is run, this runs in a separate cmd.exe window to show output. [More details below under alternate options]
+
+Installation Instruactions
+--------------------------
+
+**Download all the files in the repository first using git clone / or the download as a .zip option. Don't try and copy the text across!**
+
 (sublime text is the best and you should all use it unless you're a vim fag or something idk)
 
 (if you're using a mac this is a billion times easier, just point Sublime at GCC with the appropriate flags; have fun)
