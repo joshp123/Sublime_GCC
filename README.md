@@ -25,7 +25,7 @@ Use all the default options.
 
 Once it's installed, you need to add GCC to your path variable. To do this, right click on My Computer, go to Properties -> Advanced System Settings -> Environment Variables
 
-If you're daft enough to use [UAC]: http://en.wikipedia.org/wiki/User_Account_Control make sure to give it admin privileges when it asks.
+If you're daft enough to use [UAC](http://en.wikipedia.org/wiki/User_Account_Control) make sure to give it admin privileges when it asks.
 
 Under the "System variables" box, find "PATH" and click edit. It should have a bunch of stuff in already, for example: http://i.imgur.com/XrZ3Q.png.
 
