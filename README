@@ -31,9 +31,16 @@ This should be all done - close down all Sublime Text windows and all command pr
 
 If it doesn't work, restart your computer or something.
 
+Don't like having console windows everywhere?
+---------------------------------------------
+
+Use C_alternate.sublime-build. Rename it to C.sublime-build when you copy it over to your %appdata%\Sublime Text 2\Packages\User directory.
+
+This has the upside of not spamming console windows (which can be annoying if you're compiling and have errors), but has the downside of not executing the file (so you'll have to open up a command prompt window, navigate to your coding folder, and run the exe from within that every time you want to run your file)
+
 Known Issues:
 -------------
 
 - when compiling example.c, you get example.c.exe instead of just example.exe. I tried fixing this with regex but it didn't work and I gave up; if someone can figure it out, let me know and I'll update this (or submit a git pull thing!)
 
-- you end up with a command prompt left open with the output (if you're doing multiple compiles, then you end up with a shitload of windows.) I think it *should* be possible to get the output to display in the sublime text console (python does this) but I haven't really tried figuring it out. Again, fixes would be neat!
+- alternate version doesn't execute files after compiling. Would be nice if it could execute on a successful build; suggestions welcome!
