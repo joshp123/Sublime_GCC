@@ -1,0 +1,39 @@
+How to get Sublime Text 2 working with GCC
+==========================================
+
+(sublime text is the best and you should all use it unless you're a vim fag or something idk)
+
+(if you're using a mac this is a billion times easier, just point Sublime at GCC with the appropriate flags; have fun)
+
+First, go install MinGW - this is a port of GCC (Gnu C Compiler) to Windows. You can find the installer here: http://sourceforge.net/projects/mingw/files/latest/download?source=files
+
+Use all the default options.
+
+Once it's installed, you need to add GCC to your path variable. To do this, right click on My Computer, go to Properties -> Advanced System Settings -> Environment Variables
+
+If you're daft enough to use UAC make sure to give it admin privileges when it asks.
+
+Under the "System variables" box, find "PATH" and click edit. It should have a bunch of stuff in already, for example: http://i.imgur.com/XrZ3Q.png.
+
+Append ";C:\MinGW\bin" to that: http://i.imgur.com/QXVc8.png [if you installed it in a different location, edit this as appropriate]
+
+Click OK on all the windows, and test that it works by bringing up a command prompt and typing gcc. If it works, you should get something like this: http://i.imgur.com/DZoZO.png
+
+If you got a "'gcc' is not recognized as an internal or external command, operable program or batch file.", then you fucked something up; go check everything then restart and try again.
+
+Next, install Sublime Text 2: http://www.sublimetext.com/2 . Pro tip: add the right click menu thing, so you can easily open up anything in Sublime.
+
+Download compile.bat, and save it in the main folder where you keep your code (e.g. D:\Coding\ or whatever) (I think there was a reason for not having it in the same folder as GCC, but I've forgotten. WONTFIXWORKS4ME)
+
+Then, go to "%appdata%\Sublime Text 2\Packages\User" and paste in C.sublime-build. Open it up (in Sublime!), and make sure the D:/Coding/Compile.bat is changed to wherever you saved it in the previous step.
+
+This should be all done - close down all Sublime Text windows and all command prompts (to make sure they get the updated path variable); then test it out by re-opening Sublime Text, and compiling a file. If it works, you should get something like this: http://i.imgur.com/00Zyd.png
+
+If it doesn't work, restart your computer or something.
+
+Known Issues:
+-------------
+
+- when compiling example.c, you get example.c.exe instead of just example.exe. I tried fixing this with regex but it didn't work and I gave up; if someone can figure it out, let me know and I'll update this (or submit a git pull thing!)
+
+- you end up with a command prompt left open with the output (if you're doing multiple compiles, then you end up with a shitload of windows.) I think it *should* be possible to get the output to display in the sublime text console (python does this) but I haven't really tried figuring it out. Again, fixes would be neat!
