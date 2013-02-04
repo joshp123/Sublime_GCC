@@ -1,6 +1,6 @@
 {
-   "cmd": ["D:/Coding/compile.bat", "$file"], // redirect this to wherever you saved it to.
-   //"working_dir" : ["$file_path"],
-   "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
-   "selector": "source.c"
+	"cmd" : ["gcc", "$file_name", "-o", "${file_base_name}.exe"],
+	"selector" : "source.c",
+	"shell":true,
+	"working_dir" : "$file_path"
 }

@@ -88,6 +88,7 @@
             this.SetEverythingUp.TabIndex = 3;
             this.SetEverythingUp.Text = "Complete set up!";
             this.SetEverythingUp.UseVisualStyleBackColor = true;
+            this.SetEverythingUp.Click += new System.EventHandler(this.SetEverythingUp_Click);
             // 
             // MinGWLaunchPicker
             // 
