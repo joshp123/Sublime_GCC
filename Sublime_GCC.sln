@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sublime_GCC", "Sublime_GCC\Sublime_GCC.csproj", "{56D295B0-6BF0-4533-B26F-B336A6BB34C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sublime_GCC_Setup_Form", "Sublime_GCC_Setup_Form\Sublime_GCC_Setup_Form.csproj", "{2F543A6D-BA1C-4FA7-8EB9-DCB87A9DD7E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56D295B0-6BF0-4533-B26F-B336A6BB34C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D295B0-6BF0-4533-B26F-B336A6BB34C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D295B0-6BF0-4533-B26F-B336A6BB34C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D295B0-6BF0-4533-B26F-B336A6BB34C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F543A6D-BA1C-4FA7-8EB9-DCB87A9DD7E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F543A6D-BA1C-4FA7-8EB9-DCB87A9DD7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F543A6D-BA1C-4FA7-8EB9-DCB87A9DD7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F543A6D-BA1C-4FA7-8EB9-DCB87A9DD7E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
