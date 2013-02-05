@@ -46,6 +46,7 @@
             // MinGWPathPicker
             // 
             this.MinGWPathPicker.Description = "Please select where MinGW is installed";
+            this.MinGWPathPicker.HelpRequest += new System.EventHandler(this.MinGWPathPicker_HelpRequest);
             // 
             // splitContainer1
             // 
@@ -98,6 +99,7 @@
             this.MinGWLaunchPicker.TabIndex = 2;
             this.MinGWLaunchPicker.Text = "Browse for folder";
             this.MinGWLaunchPicker.UseVisualStyleBackColor = true;
+            this.MinGWLaunchPicker.Click += new System.EventHandler(this.MinGWLaunchPicker_Click);
             // 
             // MinGWPath
             // 

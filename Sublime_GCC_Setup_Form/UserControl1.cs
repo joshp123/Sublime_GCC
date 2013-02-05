@@ -33,7 +33,7 @@ namespace Sublime_GCC_Setup_Form
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // code to check that 
+            // code to check that mingw exists there
         }
 
         private void ST2LaunchPicker_Click(object sender, EventArgs e)
@@ -77,6 +77,19 @@ namespace Sublime_GCC_Setup_Form
                                         Environment.SpecialFolder.ApplicationData), "\\Sublime Text 2\\Packages\\User\\C.sublime-build");
 
             System.IO.File.WriteAllBytes(fileName, Sublime_GCC_Setup_Form.Properties.Resources.C);
+        }
+
+        private void MinGWLaunchPicker_Click(object sender, EventArgs e)
+        {
+            if (MinGWPathPicker.ShowDialog() == DialogResult.OK)
+            {
+                MinGWPath.Text = MinGWPathPicker.SelectedPath;
+            }
+        }
+
+        private void MinGWPathPicker_HelpRequest(object sender, EventArgs e)
+        {
+
         }
     }
 }
