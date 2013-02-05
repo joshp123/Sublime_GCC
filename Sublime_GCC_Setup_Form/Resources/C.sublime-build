@@ -1,5 +1,5 @@
 {
-	"cmd" : ["gcc", "$file_name", "-o", "${file_base_name}.exe"],
+	"cmd" : ["gcc", "$file_name", "-o", "${file_base_name}.exe" -std=c99],
 	"selector" : "source.c",
 	"shell":true,
 	"working_dir" : "$file_path"
