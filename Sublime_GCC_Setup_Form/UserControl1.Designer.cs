@@ -73,7 +73,7 @@
             // MinGWDescription
             // 
             this.MinGWDescription.AutoSize = true;
-            this.MinGWDescription.Location = new System.Drawing.Point(22, 144);
+            this.MinGWDescription.Location = new System.Drawing.Point(22, 186);
             this.MinGWDescription.Name = "MinGWDescription";
             this.MinGWDescription.Size = new System.Drawing.Size(245, 13);
             this.MinGWDescription.TabIndex = 7;
@@ -92,7 +92,7 @@
             // 
             // MinGWLaunchPicker
             // 
-            this.MinGWLaunchPicker.Location = new System.Drawing.Point(281, 163);
+            this.MinGWLaunchPicker.Location = new System.Drawing.Point(273, 202);
             this.MinGWLaunchPicker.Name = "MinGWLaunchPicker";
             this.MinGWLaunchPicker.Size = new System.Drawing.Size(98, 25);
             this.MinGWLaunchPicker.TabIndex = 2;
@@ -101,7 +101,7 @@
             // 
             // MinGWPath
             // 
-            this.MinGWPath.Location = new System.Drawing.Point(22, 163);
+            this.MinGWPath.Location = new System.Drawing.Point(24, 202);
             this.MinGWPath.Name = "MinGWPath";
             this.MinGWPath.Size = new System.Drawing.Size(243, 20);
             this.MinGWPath.TabIndex = 1;
@@ -118,7 +118,7 @@
             // ST2DownloadLink
             // 
             this.ST2DownloadLink.AutoSize = true;
-            this.ST2DownloadLink.Location = new System.Drawing.Point(57, 44);
+            this.ST2DownloadLink.Location = new System.Drawing.Point(22, 64);
             this.ST2DownloadLink.Name = "ST2DownloadLink";
             this.ST2DownloadLink.Size = new System.Drawing.Size(188, 13);
             this.ST2DownloadLink.TabIndex = 8;
@@ -129,7 +129,7 @@
             // MinGWDownloadLink
             // 
             this.MinGWDownloadLink.AutoSize = true;
-            this.MinGWDownloadLink.Location = new System.Drawing.Point(57, 71);
+            this.MinGWDownloadLink.Location = new System.Drawing.Point(22, 91);
             this.MinGWDownloadLink.Name = "MinGWDownloadLink";
             this.MinGWDownloadLink.Size = new System.Drawing.Size(154, 13);
             this.MinGWDownloadLink.TabIndex = 9;

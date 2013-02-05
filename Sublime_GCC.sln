@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sublime_GCC", "Sublime_GCC\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sublime_GCC_Setup_Form", "Sublime_GCC_Setup_Form\Sublime_GCC_Setup_Form.csproj", "{2F543A6D-BA1C-4FA7-8EB9-DCB87A9DD7E5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{23ED2DEB-C120-44A2-985D-A9D7B74E1BFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
