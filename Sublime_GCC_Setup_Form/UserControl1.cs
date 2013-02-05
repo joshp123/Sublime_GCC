@@ -43,8 +43,6 @@ namespace Sublime_GCC_Setup_Form
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("http://www.sublimetext.com/2");
-
             if (Environment.Is64BitOperatingSystem == true)
             {
                 MessageBox.Show("64 bit operating system detected: please pick the Windows (64 bit) installer, and don't change anything in the installer!");
@@ -53,6 +51,8 @@ namespace Sublime_GCC_Setup_Form
             {
                 MessageBox.Show("Please pick the normal Windows installer (not 64 bit), and don't change anything in the installer!");
             }
+
+            Process.Start("http://www.sublimetext.com/2");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -79,10 +79,13 @@ namespace Sublime_GCC_Setup_Form
 
             
             // add C.sublime build in appdata
-            var fileName = Path.Combine(Environment.GetFolderPath(
-                                        Environment.SpecialFolder.ApplicationData), @"\Sublime Text 2\Packages\User\C.sublime-build");
+            string appdataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string sublimeTextUserPackagePath = @"Sublime Text 2\Packages\User\C.sublime-build";
+            var fileName = Path.Combine(appdataPath,sublimeTextUserPackagePath);
 
             System.IO.File.WriteAllBytes(fileName, Sublime_GCC_Setup_Form.Properties.Resources.C);
+
+            MessageBox.Show("All done! Hopefully it all works, if not, blame solar flares not my code.");
         }
 
         private void MinGWLaunchPicker_Click(object sender, EventArgs e)

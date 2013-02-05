@@ -40,6 +40,7 @@
             this.MinGWLaunchPicker = new System.Windows.Forms.Button();
             this.MinGWPath = new System.Windows.Forms.TextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -60,6 +61,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.MinGWDownloadLink);
@@ -109,7 +111,7 @@
             // ST2DownloadLink
             // 
             this.ST2DownloadLink.AutoSize = true;
-            this.ST2DownloadLink.Location = new System.Drawing.Point(446, 81);
+            this.ST2DownloadLink.Location = new System.Drawing.Point(446, 72);
             this.ST2DownloadLink.Name = "ST2DownloadLink";
             this.ST2DownloadLink.Size = new System.Drawing.Size(188, 13);
             this.ST2DownloadLink.TabIndex = 8;
@@ -129,9 +131,10 @@
             // 
             // SetEverythingUp
             // 
-            this.SetEverythingUp.Location = new System.Drawing.Point(234, 341);
+            this.SetEverythingUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SetEverythingUp.Location = new System.Drawing.Point(166, 320);
             this.SetEverythingUp.Name = "SetEverythingUp";
-            this.SetEverythingUp.Size = new System.Drawing.Size(134, 25);
+            this.SetEverythingUp.Size = new System.Drawing.Size(222, 66);
             this.SetEverythingUp.TabIndex = 3;
             this.SetEverythingUp.Text = "Complete set up!";
             this.SetEverythingUp.UseVisualStyleBackColor = true;
@@ -163,6 +166,15 @@
             this.progressBar1.Size = new System.Drawing.Size(651, 37);
             this.progressBar1.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(448, 282);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 104);
+            this.label3.TabIndex = 12;
+            this.label3.Text = resources.GetString("label3.Text");
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,5 +204,6 @@
         private System.Windows.Forms.LinkLabel MinGWDownloadLink;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
