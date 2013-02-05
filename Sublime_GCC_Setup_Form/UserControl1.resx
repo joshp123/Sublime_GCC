@@ -128,7 +128,8 @@ Check back later for version 2.5,
 planned features include:
    - running on cluster computers
    - a less shit UI
-   - free liqor and drugs for all users</value>
+   - free liqor and drugs for all users
+</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>0) Ensure this application is running as admin (right click -&gt; run as admin)
@@ -141,6 +142,11 @@ C drive and didn't change anything when installing, this should already be corre
 
 3) Click complete set up
 
-4) Load up Sublime Text 2. Hit "Control + B" to compile your C file.</value>
+4) Load up Sublime Text 2. Hit "Control + B" to compile your C file.
+
+5) Run your code from the command line. To get a command prompt in the right
+place, Shift + Right Click in the folder containing your code, and click "Open
+Command Window Here". Run your code by simply typing "myfile.exe" then enter.
+To run it again, simply press the up arrow then enter.</value>
   </data>
 </root>

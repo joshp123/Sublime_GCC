@@ -57,6 +57,7 @@ namespace Sublime_GCC_Setup_Form
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            // this is mingw
             MessageBox.Show("Please simply select the default options the installer presents. Change nothing!");
             Process.Start("http://sourceforge.net/projects/mingw/files/latest/download?source=files");
         }
@@ -106,6 +107,11 @@ namespace Sublime_GCC_Setup_Form
         }
 
         private void MinGWPathPicker_HelpRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
