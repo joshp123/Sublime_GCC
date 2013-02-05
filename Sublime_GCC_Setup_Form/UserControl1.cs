@@ -71,11 +71,19 @@ namespace Sublime_GCC_Setup_Form
             }
             
             // add path variable
-            string keyName = @"SYSTEM\CurrentControlSet\Control\Session Manager\Environment\";
-            string existingPathFolderVariable = (string)Registry.LocalMachine.OpenSubKey(keyName).GetValue("PATH", "", RegistryValueOptions.DoNotExpandEnvironmentNames);
-            string newPathFolderVariable = existingPathFolderVariable + ";" + MinGWPath.Text;
+            try
+            {
+                string keyName = @"SYSTEM\CurrentControlSet\Control\Session Manager\Environment\";
+                string existingPathFolderVariable = (string)Registry.LocalMachine.OpenSubKey(keyName).GetValue("PATH", "", RegistryValueOptions.DoNotExpandEnvironmentNames);
+                string newPathFolderVariable = existingPathFolderVariable + ";" + MinGWPath.Text + "\\bin";
 
-            System.Environment.SetEnvironmentVariable("PATH", newPathFolderVariable);
+                System.Environment.SetEnvironmentVariable("Path", newPathFolderVariable, EnvironmentVariableTarget.Machine);
+            }
+            catch (System.Security.SecurityException)
+            {
+                MessageBox.Show("You appear to not have the required privileges. Please close the application and start it again as an administrator");
+                Application.Exit();
+            }
 
             
             // add C.sublime build in appdata
@@ -85,7 +93,8 @@ namespace Sublime_GCC_Setup_Form
 
             System.IO.File.WriteAllBytes(fileName, Sublime_GCC_Setup_Form.Properties.Resources.C);
 
-            MessageBox.Show("All done! Hopefully it all works, if not, blame solar flares not my code.");
+            MessageBox.Show("All done! Hopefully it all works, if not, blame solar flares, fat cat bankers, or Boris Johnson, not my code.");
+            Application.Exit();
         }
 
         private void MinGWLaunchPicker_Click(object sender, EventArgs e)
