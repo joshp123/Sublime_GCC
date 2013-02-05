@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl1));
             this.MinGWPathPicker = new System.Windows.Forms.FolderBrowserDialog();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.MinGWDownloadLink = new System.Windows.Forms.LinkLabel();
+            this.ST2DownloadLink = new System.Windows.Forms.LinkLabel();
             this.MinGWDescription = new System.Windows.Forms.Label();
             this.SetEverythingUp = new System.Windows.Forms.Button();
             this.MinGWLaunchPicker = new System.Windows.Forms.Button();
             this.MinGWPath = new System.Windows.Forms.TextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.ST2DownloadLink = new System.Windows.Forms.LinkLabel();
-            this.MinGWDownloadLink = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -57,6 +60,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.MinGWDownloadLink);
             this.splitContainer1.Panel1.Controls.Add(this.ST2DownloadLink);
             this.splitContainer1.Panel1.Controls.Add(this.MinGWDescription);
@@ -67,14 +72,55 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.progressBar1);
-            this.splitContainer1.Size = new System.Drawing.Size(428, 321);
-            this.splitContainer1.SplitterDistance = 292;
+            this.splitContainer1.Size = new System.Drawing.Size(651, 448);
+            this.splitContainer1.SplitterDistance = 407;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(390, 143);
+            this.label2.TabIndex = 11;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Instructions";
+            // 
+            // MinGWDownloadLink
+            // 
+            this.MinGWDownloadLink.AutoSize = true;
+            this.MinGWDownloadLink.Location = new System.Drawing.Point(480, 43);
+            this.MinGWDownloadLink.Name = "MinGWDownloadLink";
+            this.MinGWDownloadLink.Size = new System.Drawing.Size(154, 13);
+            this.MinGWDownloadLink.TabIndex = 9;
+            this.MinGWDownloadLink.TabStop = true;
+            this.MinGWDownloadLink.Text = "Click here to download MinGW";
+            this.MinGWDownloadLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // ST2DownloadLink
+            // 
+            this.ST2DownloadLink.AutoSize = true;
+            this.ST2DownloadLink.Location = new System.Drawing.Point(446, 81);
+            this.ST2DownloadLink.Name = "ST2DownloadLink";
+            this.ST2DownloadLink.Size = new System.Drawing.Size(188, 13);
+            this.ST2DownloadLink.TabIndex = 8;
+            this.ST2DownloadLink.TabStop = true;
+            this.ST2DownloadLink.Text = "Click here to download Sublime Text 2";
+            this.ST2DownloadLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // MinGWDescription
             // 
             this.MinGWDescription.AutoSize = true;
-            this.MinGWDescription.Location = new System.Drawing.Point(22, 186);
+            this.MinGWDescription.Location = new System.Drawing.Point(22, 213);
             this.MinGWDescription.Name = "MinGWDescription";
             this.MinGWDescription.Size = new System.Drawing.Size(245, 13);
             this.MinGWDescription.TabIndex = 7;
@@ -83,7 +129,7 @@
             // 
             // SetEverythingUp
             // 
-            this.SetEverythingUp.Location = new System.Drawing.Point(157, 254);
+            this.SetEverythingUp.Location = new System.Drawing.Point(234, 341);
             this.SetEverythingUp.Name = "SetEverythingUp";
             this.SetEverythingUp.Size = new System.Drawing.Size(134, 25);
             this.SetEverythingUp.TabIndex = 3;
@@ -93,7 +139,7 @@
             // 
             // MinGWLaunchPicker
             // 
-            this.MinGWLaunchPicker.Location = new System.Drawing.Point(273, 202);
+            this.MinGWLaunchPicker.Location = new System.Drawing.Point(290, 241);
             this.MinGWLaunchPicker.Name = "MinGWLaunchPicker";
             this.MinGWLaunchPicker.Size = new System.Drawing.Size(98, 25);
             this.MinGWLaunchPicker.TabIndex = 2;
@@ -103,7 +149,7 @@
             // 
             // MinGWPath
             // 
-            this.MinGWPath.Location = new System.Drawing.Point(24, 202);
+            this.MinGWPath.Location = new System.Drawing.Point(24, 241);
             this.MinGWPath.Name = "MinGWPath";
             this.MinGWPath.Size = new System.Drawing.Size(243, 20);
             this.MinGWPath.TabIndex = 1;
@@ -114,30 +160,8 @@
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.progressBar1.Location = new System.Drawing.Point(0, 0);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(428, 25);
+            this.progressBar1.Size = new System.Drawing.Size(651, 37);
             this.progressBar1.TabIndex = 0;
-            // 
-            // ST2DownloadLink
-            // 
-            this.ST2DownloadLink.AutoSize = true;
-            this.ST2DownloadLink.Location = new System.Drawing.Point(22, 64);
-            this.ST2DownloadLink.Name = "ST2DownloadLink";
-            this.ST2DownloadLink.Size = new System.Drawing.Size(188, 13);
-            this.ST2DownloadLink.TabIndex = 8;
-            this.ST2DownloadLink.TabStop = true;
-            this.ST2DownloadLink.Text = "Click here to download Sublime Text 2";
-            this.ST2DownloadLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // MinGWDownloadLink
-            // 
-            this.MinGWDownloadLink.AutoSize = true;
-            this.MinGWDownloadLink.Location = new System.Drawing.Point(22, 91);
-            this.MinGWDownloadLink.Name = "MinGWDownloadLink";
-            this.MinGWDownloadLink.Size = new System.Drawing.Size(154, 13);
-            this.MinGWDownloadLink.TabIndex = 9;
-            this.MinGWDownloadLink.TabStop = true;
-            this.MinGWDownloadLink.Text = "Click here to download MinGW";
-            this.MinGWDownloadLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // UserControl1
             // 
@@ -145,7 +169,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(428, 321);
+            this.Size = new System.Drawing.Size(651, 448);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -166,5 +190,7 @@
         private System.Windows.Forms.Label MinGWDescription;
         private System.Windows.Forms.LinkLabel ST2DownloadLink;
         private System.Windows.Forms.LinkLabel MinGWDownloadLink;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

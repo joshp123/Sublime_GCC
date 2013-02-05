@@ -63,6 +63,12 @@ namespace Sublime_GCC_Setup_Form
 
         private void SetEverythingUp_Click(object sender, EventArgs e)
         {
+
+            if (System.IO.File.Exists(Path.Combine(MinGWPath.Text, @"bin\gcc.exe")) == false)
+            {
+                MessageBox.Show("MinGW not found at specified location, please check again!");
+                return;
+            }
             
             // add path variable
             string keyName = @"SYSTEM\CurrentControlSet\Control\Session Manager\Environment\";
@@ -74,7 +80,7 @@ namespace Sublime_GCC_Setup_Form
             
             // add C.sublime build in appdata
             var fileName = Path.Combine(Environment.GetFolderPath(
-                                        Environment.SpecialFolder.ApplicationData), "\\Sublime Text 2\\Packages\\User\\C.sublime-build");
+                                        Environment.SpecialFolder.ApplicationData), @"\Sublime Text 2\Packages\User\C.sublime-build");
 
             System.IO.File.WriteAllBytes(fileName, Sublime_GCC_Setup_Form.Properties.Resources.C);
         }

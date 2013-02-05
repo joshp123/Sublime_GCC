@@ -111,6 +111,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sublime_GCC_Setup_Form\Sublime_GCC_Setup_Form.csproj">
+      <Project>{2f543a6d-ba1c-4fa7-8eb9-dcb87a9dd7e5}</Project>
+      <Name>Sublime_GCC_Setup_Form</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
