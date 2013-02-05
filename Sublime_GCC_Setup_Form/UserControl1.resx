@@ -120,6 +120,16 @@
   <metadata name="MinGWPathPicker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="label3.Text" xml:space="preserve">
+    <value>(C) Josh Palmer 2013
+Thanks to Oliver Rigg for beta testing!
+
+Check back later for version 2.5,
+planned features include:
+   - running on cluster computers
+   - a less shit UI
+   - free liqor and drugs for all users</value>
+  </data>
   <data name="label2.Text" xml:space="preserve">
     <value>0) Ensure this application is running as admin (right click -&gt; run as admin)
 
