@@ -43,28 +43,17 @@ namespace Sublime_GCC_Setup_Form
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (Environment.Is64BitOperatingSystem == true)
-            {
-                MessageBox.Show("64 bit operating system detected: please pick the Windows (64 bit) installer, and don't change anything in the installer!");
-            }
-            else
-            {
-                MessageBox.Show("Please pick the normal Windows installer (not 64 bit), and don't change anything in the installer!");
-            }
 
-            Process.Start("http://www.sublimetext.com/2");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // this is mingw
-            MessageBox.Show("Please simply select the default options the installer presents. Change nothing!");
-            Process.Start("http://sourceforge.net/projects/mingw/files/latest/download?source=files");
         }
 
         private void SetEverythingUp_Click(object sender, EventArgs e)
-        {
-
+        {          
+            
             if (System.IO.File.Exists(Path.Combine(MinGWPath.Text, @"bin\gcc.exe")) == false)
             {
                 MessageBox.Show("MinGW not found at specified location, please check again!");
@@ -92,6 +81,10 @@ namespace Sublime_GCC_Setup_Form
             string sublimeTextUserPackagePath = @"Sublime Text 2\Packages\User\C.sublime-build";
             var fileName = Path.Combine(appdataPath,sublimeTextUserPackagePath);
 
+            if (System.IO.File.Exists(fileName) == false)
+            {
+                File.Create(fileName);
+            }
             System.IO.File.WriteAllBytes(fileName, Sublime_GCC_Setup_Form.Properties.Resources.C);
 
             MessageBox.Show("All done! Hopefully it all works, if not, blame solar flares, fat cat bankers, or Boris Johnson, not my code.");
@@ -114,6 +107,26 @@ namespace Sublime_GCC_Setup_Form
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void MinGWDownloadLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Please simply select the default options the installer presents. Change nothing!");
+            Process.Start("http://sourceforge.net/projects/mingw/files/latest/download?source=files");
+        }
+
+        private void ST2DownloadLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (Environment.Is64BitOperatingSystem == true)
+            {
+                MessageBox.Show("64 bit operating system detected: please pick the Windows (64 bit) installer, and don't change anything in the installer!");
+            }
+            else
+            {
+                MessageBox.Show("Please pick the normal Windows installer (not 64 bit), and don't change anything in the installer!");
+            }
+
+            Process.Start("http://www.sublimetext.com/2");
         }
     }
 }

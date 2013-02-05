@@ -83,6 +83,7 @@
             this.MinGWDownloadLink.TabIndex = 18;
             this.MinGWDownloadLink.TabStop = true;
             this.MinGWDownloadLink.Text = "Click here to download MinGW";
+            this.MinGWDownloadLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.MinGWDownloadLink_LinkClicked);
             this.MinGWDownloadLink.Click += new System.EventHandler(this.label2_Click);
             // 
             // ST2DownloadLink
@@ -94,6 +95,7 @@
             this.ST2DownloadLink.TabIndex = 17;
             this.ST2DownloadLink.TabStop = true;
             this.ST2DownloadLink.Text = "Click here to download Sublime Text 2";
+            this.ST2DownloadLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ST2DownloadLink_LinkClicked);
             this.ST2DownloadLink.Click += new System.EventHandler(this.label1_Click);
             // 
             // MinGWDescription
