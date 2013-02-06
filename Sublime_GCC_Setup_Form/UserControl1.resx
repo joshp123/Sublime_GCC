@@ -142,11 +142,6 @@ C drive and didn't change anything when installing, this should already be corre
 
 3) Click complete set up
 
-4) Load up Sublime Text 2. Hit "Control + B" to compile your C file.
-
-5) Run your code from the command line. To get a command prompt in the right
-place, Shift + Right Click in the folder containing your code, and click "Open
-Command Window Here". Run your code by simply typing "myfile.exe" then enter.
-To run it again, simply press the up arrow then enter.</value>
+4) Load up Sublime Text 2. Hit "Control + B" to compile and run your C file.</value>
   </data>
 </root>
