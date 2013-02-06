@@ -49,7 +49,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(452, 312);
+            this.label3.Location = new System.Drawing.Point(450, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(186, 104);
             this.label3.TabIndex = 21;
@@ -60,7 +60,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(392, 208);
+            this.label2.Size = new System.Drawing.Size(390, 143);
             this.label2.TabIndex = 20;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -101,7 +101,7 @@
             // MinGWDescription
             // 
             this.MinGWDescription.AutoSize = true;
-            this.MinGWDescription.Location = new System.Drawing.Point(27, 284);
+            this.MinGWDescription.Location = new System.Drawing.Point(25, 227);
             this.MinGWDescription.Name = "MinGWDescription";
             this.MinGWDescription.Size = new System.Drawing.Size(245, 13);
             this.MinGWDescription.TabIndex = 16;
@@ -110,7 +110,7 @@
             // SetEverythingUp
             // 
             this.SetEverythingUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SetEverythingUp.Location = new System.Drawing.Point(170, 350);
+            this.SetEverythingUp.Location = new System.Drawing.Point(168, 293);
             this.SetEverythingUp.Name = "SetEverythingUp";
             this.SetEverythingUp.Size = new System.Drawing.Size(222, 66);
             this.SetEverythingUp.TabIndex = 15;
@@ -120,7 +120,7 @@
             // 
             // MinGWLaunchPicker
             // 
-            this.MinGWLaunchPicker.Location = new System.Drawing.Point(295, 312);
+            this.MinGWLaunchPicker.Location = new System.Drawing.Point(293, 255);
             this.MinGWLaunchPicker.Name = "MinGWLaunchPicker";
             this.MinGWLaunchPicker.Size = new System.Drawing.Size(98, 25);
             this.MinGWLaunchPicker.TabIndex = 14;
@@ -130,7 +130,7 @@
             // 
             // MinGWPath
             // 
-            this.MinGWPath.Location = new System.Drawing.Point(29, 312);
+            this.MinGWPath.Location = new System.Drawing.Point(27, 255);
             this.MinGWPath.Name = "MinGWPath";
             this.MinGWPath.Size = new System.Drawing.Size(243, 20);
             this.MinGWPath.TabIndex = 13;
@@ -152,7 +152,7 @@
             this.Controls.Add(this.MinGWLaunchPicker);
             this.Controls.Add(this.MinGWPath);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(662, 442);
+            this.Size = new System.Drawing.Size(662, 383);
             this.ResumeLayout(false);
             this.PerformLayout();
 

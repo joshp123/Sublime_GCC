@@ -65,7 +65,7 @@ namespace Sublime_GCC_Setup_Form
             {
                 string keyName = @"SYSTEM\CurrentControlSet\Control\Session Manager\Environment\";
                 string existingPathFolderVariable = (string)Registry.LocalMachine.OpenSubKey(keyName).GetValue("PATH", "", RegistryValueOptions.DoNotExpandEnvironmentNames);
-                if (existingPathFolderVariable.Contains(MinGWPath.Text) == false)
+                if (existingPathFolderVariable.Contains(MinGWPath.Text + "\\bin") == false)
                 {
                     string newPathFolderVariable = existingPathFolderVariable + ";" + MinGWPath.Text + "\\bin";
                     // only append it to the path variable if it's not already there so you don't get multiple occurences
