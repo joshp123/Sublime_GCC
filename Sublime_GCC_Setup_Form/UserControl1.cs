@@ -48,7 +48,7 @@ namespace Sublime_GCC_Setup_Form
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // this is mingw
+            
         }
 
         private void SetEverythingUp_Click(object sender, EventArgs e)
@@ -65,9 +65,13 @@ namespace Sublime_GCC_Setup_Form
             {
                 string keyName = @"SYSTEM\CurrentControlSet\Control\Session Manager\Environment\";
                 string existingPathFolderVariable = (string)Registry.LocalMachine.OpenSubKey(keyName).GetValue("PATH", "", RegistryValueOptions.DoNotExpandEnvironmentNames);
-                string newPathFolderVariable = existingPathFolderVariable + ";" + MinGWPath.Text + "\\bin";
-
-                System.Environment.SetEnvironmentVariable("Path", newPathFolderVariable, EnvironmentVariableTarget.Machine);
+                if (existingPathFolderVariable.Contains(MinGWPath.Text) == false)
+                {
+                    string newPathFolderVariable = existingPathFolderVariable + ";" + MinGWPath.Text + "\\bin";
+                    // only append it to the path variable if it's not already there so you don't get multiple occurences
+                    System.Environment.SetEnvironmentVariable("Path", newPathFolderVariable, EnvironmentVariableTarget.Machine);
+                }
+                
             }
             catch (System.Security.SecurityException)
             {
