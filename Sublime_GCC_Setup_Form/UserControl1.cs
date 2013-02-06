@@ -102,7 +102,7 @@ namespace Sublime_GCC_Setup_Form
                 MessageBox.Show("Error accessing C.sublime-build, please ensure that nothing is opening it");
             }
 
-            MessageBox.Show("All done! Hopefully it all works, if not, blame solar flares, fat cat bankers, or Boris Johnson, not my code.");
+            MessageBox.Show("All done! Hopefully it all works, if not, uh, oops.");
             Application.Exit();
         }
 
