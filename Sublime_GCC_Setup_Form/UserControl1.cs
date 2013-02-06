@@ -87,9 +87,20 @@ namespace Sublime_GCC_Setup_Form
 
             if (System.IO.File.Exists(fileName) == false)
             {
-                File.Create(fileName);
+                if (System.IO.Directory.Exists(Path.GetDirectoryName(fileName)) == false)
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(fileName));
+                }
             }
-            System.IO.File.WriteAllBytes(fileName, Sublime_GCC_Setup_Form.Properties.Resources.C);
+
+            try
+            {
+                System.IO.File.WriteAllBytes(fileName, Sublime_GCC_Setup_Form.Properties.Resources.C);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error accessing C.sublime-build, please ensure that nothing is opening it");
+            }
 
             MessageBox.Show("All done! Hopefully it all works, if not, blame solar flares, fat cat bankers, or Boris Johnson, not my code.");
             Application.Exit();
