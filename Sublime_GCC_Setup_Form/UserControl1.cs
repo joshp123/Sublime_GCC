@@ -75,7 +75,7 @@ namespace Sublime_GCC_Setup_Form
             }
             catch (System.Security.SecurityException)
             {
-                MessageBox.Show("You appear to not have the required privileges. Please close the application and start it again as an administrator");
+                MessageBox.Show("You appear to not have the required privileges. Please close the application and start it again as an administrator (right click -> run as admin)");
                 Application.Exit();
             }
 
